@@ -52,4 +52,11 @@ queue.enqueue(2)
 print(queue.first())
 
 queue.enqueue(3)
+queue.enqueue(4)
+queue.enqueue(5)
+queue.enqueue(6)
+
+queue.dequeue()
+queue.dequeue()
+
 print(queue.first())
