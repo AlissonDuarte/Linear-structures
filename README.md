@@ -5,7 +5,7 @@ This repository contains Python implementations of three fundamental data struct
 ## Contents
 
 1. **Stack:**
-    -Implementation of an expression validator using the LIFO principle.
+   - Implementation of an expression validator using the LIFO principle.
    - Operations: Push (insert), Pop (remove), Peek (view the top), and Check if it's empty.
 
 2. **Queue:**
