@@ -9,7 +9,7 @@ class Stack:
     def __is_full(self):
         return self.__top == self.__size - 1
 
-    def __is_empty(self):
+    def is_empty(self):
         return self.__top == -1
 
     def push(self, value):
@@ -20,7 +20,7 @@ class Stack:
             self.__values[self.__top] = value
 
     def pop(self):
-        if self.__is_empty():
+        if self.is_empty():
             raise Exception("The stack is empty")
         else:
             value = self.__values[self.__top]
@@ -28,7 +28,7 @@ class Stack:
             return value
 
     def peek_top(self):
-        if not self.__is_empty():
+        if not self.is_empty():
             return self.__values[self.__top]
         else:
             return None
@@ -41,16 +41,13 @@ def validate_expression(expression):
         if ch in ['{', '[', '(']:
             stack.push(ch)
         elif ch in ['}', ']', ')']:
-            if not stack.__is_empty():
+            if not stack.is_empty():
                 chx = str(stack.pop())
                 if (ch == '}' and chx != '{') or (ch == ']' and chx != '[') or (ch == ')' and chx != '('):
                     raise Exception(f"Error: {ch} in position {i}")
-    if not stack.__is_empty():
+    if not stack.is_empty():
         raise Exception("Error: Unmatched opening bracket(s)")
 
-try:
-    expression = input("Type your expression: ")
-    validate_expression(expression)
-    print("Expression is valid.")
-except Exception as e:
-    print(e)
+expression = input("Type your expression: ")
+validate_expression(expression)
+print("Expression is valid.")

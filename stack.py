@@ -32,7 +32,7 @@ class Stack:
         else:
             self.__top += 1
             self.__values[self.__top] = value
-            return "Updated!"
+            return f"the value: {value} has been entered!"
 
     def pop(self):
         """
@@ -43,7 +43,7 @@ class Stack:
             raise Exception("The stack is empty")
         else:
             self.__top -= 1
-            return "Updated!"
+            return f"the value: {self.__values[self.__top]} has been removed"
 
     def peek_top(self):
         """
@@ -56,14 +56,13 @@ class Stack:
             return -1
 
 # Example usage of the Stack class
-try:
-    stack = Stack(10)
 
-    for x in range(11):
-        print(x, stack.push(x))
-    print("Top of stack is:", stack.peek_top())
+stack = Stack(5)
 
-    for _ in range(11):
-        print(stack.pop())
-except Exception as e:
-    print(f"Error: {e}")
+for x in range(5):
+    print(stack.push(x))
+print("Top of stack is:", stack.peek_top())
+
+for _ in range(6):
+    print(stack.pop())
+print("Top of stack is:", stack.peek_top())
