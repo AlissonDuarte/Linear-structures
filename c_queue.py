@@ -53,19 +53,18 @@ class CircularQueue:
 queue = CircularQueue(5)
 print(queue.first()) # Empty queue
 
-queue.enqueue(1)
-print(queue.first())
+for i in range(5):
+    queue.enqueue(i)
+print(f"The value of the first element is: {queue.first()}")
 
-queue.enqueue(2)
-print(queue.first())
+for j in range(2):
+    print(f"The removed element has the value of {queue.dequeue()}")
+print(f"The first element of the queue is: {queue.first()}")
 
-queue.enqueue(3)
-queue.enqueue(4)
+for i in range(6,8):
+    # The first iteration reverses the position of the indicators
+    queue.enqueue(i)
 
-queue.dequeue()
-queue.dequeue()
-
-queue.enqueue(5) # Reverses the position of the indicators
-queue.enqueue(6)
-
-print(queue.first()) # the next element to leave has index 2 and value 3
+for j in range(2):
+    print(f"The removed element has the value of {queue.dequeue()}")
+print(f"The first element of the queue is: {queue.first()}")
