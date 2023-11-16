@@ -51,7 +51,7 @@ class CircularQueue:
         return self.values[self.start]
 
 queue = CircularQueue(5)
-print(queue.first())
+print(queue.first()) # Empty queue
 
 queue.enqueue(1)
 print(queue.first())
@@ -61,8 +61,11 @@ print(queue.first())
 
 queue.enqueue(3)
 queue.enqueue(4)
+
 queue.dequeue()
 queue.dequeue()
-queue.enqueue(5)
+
+queue.enqueue(5) # Reverses the position of the indicators
 queue.enqueue(6)
-print(queue.first())
+
+print(queue.first()) # the next element to leave has index 2 and value 3
