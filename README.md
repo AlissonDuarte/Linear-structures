@@ -24,3 +24,4 @@ For a deeper theoretical understanding and a detailed analysis of the implementa
 
 Each data structure is implemented in its respective Python file (`stack.py`, `c_queue.py`, and `deque.py`). To use, simply import the file relevant to your code.
 
+[You can read the full article on DevTo](https://dev.to/shahahaco/solving-real-validation-and-performance-issues-with-stacks-and-queues-3bpb)
